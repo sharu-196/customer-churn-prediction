@@ -1,89 +1,150 @@
-# 📊 Customer Churn Prediction System
+# Customer Churn Prediction Using Machine Learning
 
-A Machine Learning web application developed using **Python, Pandas, NumPy, Scikit-learn, and Streamlit** to predict the likelihood of customers leaving a service.
+## 📌 Project Overview
 
-## 📌 Objective
+This project focuses on predicting whether a customer is likely to leave a telecommunications service using machine learning techniques.
 
-To develop a machine learning application that predicts customer churn based on customer demographics, service subscriptions, contract details, and billing information. The system estimates the probability of a customer leaving the service, helping businesses identify customers who may need additional support.
+The goal is to analyze customer demographics, service subscriptions, contract details, and billing information to identify patterns associated with customer churn and build a predictive model to support data-driven customer retention strategies.
 
-## 🛠 Tools & Technologies Used
+This project follows an end-to-end machine learning workflow including data exploration, preprocessing, model development, evaluation, and web application deployment.
 
-- **Programming Language:** Python
-- **Data Processing:** Pandas, NumPy
-- **Machine Learning:** Scikit-learn
-- **Machine Learning Algorithm:** Logistic Regression
-- **Data Visualization:** Matplotlib, Seaborn
-- **Frontend & Web Application:** Streamlit
-- **Model Serialization:** Joblib
-- **Dataset:** Telco Customer Churn Dataset
-- **Development Environment:** Jupyter Notebook
+## 🎯 Problem Statement
 
-## 📂 Project Contents
+Customer churn is a major challenge for businesses, particularly in the telecommunications industry. Losing customers can affect revenue and business growth.
 
-- 📄 `app.py` – Streamlit application for customer churn prediction
-- 🤖 `customer_churn_model.pkl` – Trained machine learning model
-- 📋 `requirements.txt` – Required Python packages
-- 📊 `WA_Fn-UseC_-Telco-Customer-Churn.csv` – Dataset used for model development *(if included in the repository)*
+The objective of this project is to build a machine learning model that predicts whether a customer is likely to leave a service based on historical customer data.
+
+The prediction helps businesses identify customers who may be at risk of leaving and supports better customer retention decisions.
+
+## 📂 Dataset
+
+**Dataset:** Telco Customer Churn Dataset
+
+The dataset contains customer demographic information, service subscriptions, contract details, payment methods, and billing information.
+
+### Key Features
+
+**Customer Information**
+- Customer ID
+- Gender
+- Senior citizen status
+- Partner status
+- Dependents
+
+**Service Information**
+- Phone service
+- Internet service
+- Online security
+- Online backup
+- Device protection
+- Tech support
+- Streaming services
+
+**Contract and Billing Information**
+- Tenure
+- Contract type
+- Paperless billing
+- Payment method
+- Monthly charges
+- Total charges
+
+### Target Variable
+
+`Churn`
+
+- `Yes` → Customer left the service
+- `No` → Customer continued using the service
+
+## 🧠 Approach
+
+### 1. Data Understanding
+- Loaded and explored the customer churn dataset
+- Examined dataset structure and feature types
+- Analyzed customer characteristics and churn distribution
+
+### 2. Data Preprocessing
+- Removed unnecessary customer identifiers
+- Handled missing or invalid values
+- Converted numerical features into appropriate data types
+- Encoded categorical variables
+- Prepared the dataset for model training
+
+### 3. Exploratory Data Analysis (EDA)
+- Analyzed customer demographics and service subscriptions
+- Examined relationships between contract types, tenure, billing, and churn
+- Visualized customer churn patterns using charts
+
+### 4. Model Development
+
+The project uses **Logistic Regression** for binary classification to predict customer churn.
+
+The dataset is divided into training and testing sets to evaluate the model's ability to predict unseen customer records.
+
+### 5. Model Evaluation
+
+The model is evaluated using:
+- Accuracy
+- Confusion Matrix
+- Churn Probability
+- Predicted Churn Status
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Streamlit
+- Jupyter Notebook
+
+## 📁 Project Structure
+
+```text
+Customer-Churn-Prediction/
+│
+├── app.py
+├── customer_churn_model.pkl
+├── requirements.txt
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+└── README.md
+```
+
+*The CSV dataset is included in the structure only if it has been uploaded to the repository.*
 
 ## ✨ Key Features
 
-- **Customer Details Input:** Enter customer demographics and service information
-- **Data Preprocessing:** Clean and prepare customer data for model training
-- **Machine Learning Prediction:** Predict customer churn using Logistic Regression
-- **Churn Probability:** Display the estimated probability of a customer leaving the service
-- **Prediction Result:** Indicate whether a customer may churn
-- **Interactive Web Interface:** Enter customer details through a simple Streamlit form
-- **Live Deployment:** Access the application through a web browser
+- Customer information input through an interactive web form
+- Machine learning-based churn prediction
+- Estimated probability of customer churn
+- Prediction result displayed through a simple interface
+- Interactive web application built using Streamlit
+- Deployed application accessible through a web browser
 
 ## 📈 Key Outcomes
 
 - Developed an end-to-end machine learning application
 - Applied data cleaning and preprocessing techniques
-- Trained and evaluated a Logistic Regression model
-- Generated churn probability estimates for customer records
-- Deployed the prediction application using Streamlit Community Cloud
-
-## 🗃️ Dataset Description
-
-The project uses the Telco Customer Churn dataset, which contains customer information such as:
-
-- Customer demographics
-- Tenure and service subscriptions
-- Contract and payment methods
-- Monthly and total charges
-- Customer churn status
-
-The dataset is used to train the model to identify patterns associated with customer churn.
-
-## ▶️ How to Run the Project
-
-1. Install Python 3.9 or newer.
-2. Clone or download this repository.
-3. Open the project folder in a terminal.
-4. Install the required dependencies:
-
-   `pip install -r requirements.txt`
-
-5. Run the Streamlit application:
-
-   `streamlit run app.py`
-
-6. Open the local URL displayed in the terminal, usually:
-
-   `http://localhost:8501`
+- Trained a Logistic Regression classification model
+- Generated churn probability estimates
+- Built and deployed an interactive prediction application
 
 ## 🚀 Live Demo
 
-**Live Application:** [Customer Churn Prediction System](https://customer-churn-prediction-b9w9k3r7medlojshkixvgp.streamlit.app/)
+**Live Application:** [Customer Churn Prediction System](https://share.streamlit.io/)
 
-## 🔮 Future Enhancements
+*Replace this link with your actual Streamlit app URL.*
 
-- Compare multiple machine learning algorithms
-- Improve model performance through hyperparameter tuning
-- Add customer churn analytics dashboards
-- Identify important factors influencing churn
-- Provide customer retention recommendations
-- Add model monitoring and periodic retraining
+## 🔮 Future Improvements
+
+- Compare Logistic Regression with Random Forest and other algorithms
+- Perform hyperparameter tuning
+- Analyze feature importance and churn drivers
+- Add customer retention recommendations
+- Improve model performance and evaluation
+- Enhance the application with interactive analytics dashboards
 
 ## 👩‍💻 Author
 
